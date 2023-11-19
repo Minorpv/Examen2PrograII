@@ -125,35 +125,5 @@ namespace TecReparacionExamen2PrograII.CLS
 
             return retorno;
         }
-        public static int consultar (int codigo)
-        {
-            int retorno = 0;
-
-            SqlConnection Conn = new SqlConnection();
-            try
-            {
-                using (Conn = DBConn.obtenerConexion())
-                {
-                    SqlCommand cmd = new SqlCommand("consultaUsuarioFiltro", Conn)
-                    {
-                        CommandType = CommandType.StoredProcedure
-                    };
-                    cmd.Parameters.Add(new SqlParameter("@codigo", codigo));
-
-
-                    retorno = cmd.ExecuteNonQuery();
-                }
-            }
-            catch (System.Data.SqlClient.SqlException ex)
-            {
-                retorno = -1;
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            return retorno;
-        }
     }
 }

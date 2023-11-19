@@ -39,7 +39,7 @@
         <asp:Button ID="Button1" runat="server" Text="Agregar" CssClass="btn" OnClick="Button1_Click"/>
         <asp:Button ID="Button2" runat="server" Text="Modificar" CssClass="btn" OnClick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" Text="Eliminar" CssClass="btn" OnClick="Button3_Click" />
-        <asp:Button ID="Button4" runat="server" Text="Consultar" CssClass="btn" />
+        <asp:Button ID="Button4" runat="server" Text="Consultar" CssClass="btn" OnClick="Button4_Click"/>
         <br />
         <br />
     </div>

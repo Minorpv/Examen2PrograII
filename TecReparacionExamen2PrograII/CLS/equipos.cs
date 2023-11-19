@@ -100,7 +100,7 @@ namespace TecReparacionExamen2PrograII.CLS
             {
                 using (Conn = DBConn.obtenerConexion())
                 {
-                    SqlCommand cmd = new SqlCommand("borrarEquipos", Conn)
+                    SqlCommand cmd = new SqlCommand("modificarequipo", Conn)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
@@ -125,6 +125,5 @@ namespace TecReparacionExamen2PrograII.CLS
             return retorno;
 
         }
-        public void consultar() { }
     }
 }

@@ -121,6 +121,5 @@ namespace TecReparacionExamen2PrograII.CLS
             return retorno;
 
         }
-        public void consultar() { }
     }
 }

@@ -70,7 +70,7 @@ namespace TecReparacionExamen2PrograII
             TextBoxID.Text = "";
             TextBoxNom.Text = "";
             TextBoxCorreo.Text = "nombre@correo.com";
-            TextBoxNom.Text = "";
+            TextBoxTel.Text = "";
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace TecReparacionExamen2PrograII
             TextBoxID.Text = "";
             TextBoxNom.Text = "";
             TextBoxCorreo.Text = "nombre@correo.com";
-            TextBoxNom.Text = "";
+            TextBoxTel.Text = "";
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -102,23 +102,34 @@ namespace TecReparacionExamen2PrograII
             TextBoxID.Text = "";
             TextBoxNom.Text = "";
             TextBoxCorreo.Text = "nombre@correo.com";
-            TextBoxNom.Text = "";
+            TextBoxTel.Text = "";
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            if (CLS.usuario.consultar(int.Parse(TextBoxID.Text)) > 0)
+            int codigo = int.Parse(TextBoxID.Text);
+            string constr = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
             {
-                LlenarGrid();
-            }
-            else
-            {
-                alertas("Datos ingresados incorrectamente");
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM usuario WHERE usuarioID ='" + codigo + "'"))
+
+
+                using (SqlDataAdapter sda = new SqlDataAdapter())
+                {
+                    cmd.Connection = con;
+                    sda.SelectCommand = cmd;
+                    using (DataTable dt = new DataTable())
+                    {
+                        sda.Fill(dt);
+                        datagridUsuarios.DataSource = dt;
+                        datagridUsuarios.DataBind();  // actualizar el grid view
+                    }
+                }
             }
             TextBoxID.Text = "";
             TextBoxNom.Text = "";
             TextBoxCorreo.Text = "nombre@correo.com";
-            TextBoxNom.Text = "";
+            TextBoxTel.Text = "";
         }
     }
 }
