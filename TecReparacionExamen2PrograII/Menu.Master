@@ -17,13 +17,15 @@
         <header>
                         <h1>Sistema de gestión de reparaciones de Servicios técnicos</h1>
             <br />
-            <a href="inicio.aspx" class="btn">Inicio</a>
-            <a href="usuarios.aspx" class="btn">Usuarios</a>
             <a href="tecnicos.aspx" class="btn">Técnicos</a>
+            <a href="usuarios.aspx" class="btn">Usuarios</a>
             <a href="equipos.aspx" class="btn">Equipos</a>
+            <a href="Reparaciones.aspx" class="btn">Reparaciones</a>
+            <a href="detalleRep.aspx" class="btn">Detalles de reparación</a>
+            <a href="Asignaciones.aspx" class="btn">Asignaciones</a>
             <br />
             <br />
-            <b>_______________________________________________________________________________</b>
+            <hr class="border border-primary border-3 opacity-75">
         </header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

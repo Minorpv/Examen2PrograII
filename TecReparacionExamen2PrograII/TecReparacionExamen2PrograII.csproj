@@ -67,16 +67,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asignaciones.aspx" />
     <Content Include="BD\reparacionesSQL.sql" />
     <Content Include="CSS\GridViewCSS.css" />
     <Content Include="CSS\MenuCSS.css" />
+    <Content Include="detalleRep.aspx" />
     <Content Include="equipos.aspx" />
-    <Content Include="inicio.aspx" />
+    <Content Include="Reparaciones.aspx" />
     <Content Include="tecnicos.aspx" />
     <Content Include="usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asignaciones.aspx.cs">
+      <DependentUpon>Asignaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignaciones.aspx.designer.cs">
+      <DependentUpon>Asignaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CLS\asignaciones.cs" />
     <Compile Include="CLS\DBConn.cs" />
     <Compile Include="CLS\detallesReparacion.cs" />
@@ -84,19 +93,19 @@
     <Compile Include="CLS\reparaciones.cs" />
     <Compile Include="CLS\tecnicos.cs" />
     <Compile Include="CLS\usuario.cs" />
+    <Compile Include="detalleRep.aspx.cs">
+      <DependentUpon>detalleRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalleRep.aspx.designer.cs">
+      <DependentUpon>detalleRep.aspx</DependentUpon>
+    </Compile>
     <Compile Include="equipos.aspx.cs">
       <DependentUpon>equipos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="equipos.aspx.designer.cs">
       <DependentUpon>equipos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="inicio.aspx.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="inicio.aspx.designer.cs">
-      <DependentUpon>inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>
@@ -106,6 +115,13 @@
       <DependentUpon>Menu.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reparaciones.aspx.cs">
+      <DependentUpon>Reparaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reparaciones.aspx.designer.cs">
+      <DependentUpon>Reparaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tecnicos.aspx.cs">
       <DependentUpon>tecnicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
